@@ -31,6 +31,18 @@ public class SinglePlayerGameTest {
 		rollMany(20, 1);
 		assertEquals(20, game.score());
 	}
+        
+        @Test
+        public void testSpare(){
+            rollSpare();
+            assertEquals(10, game.score());
+        }
+        
+        @Test
+        public void testStrike(){
+            rollMany(4, 10);
+            assertEquals(90, game.score());
+        }
 
 	@Test
 	public void testOneSpare()  {
